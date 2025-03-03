@@ -1,0 +1,141 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #000 url('images/space-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 컨테이너 */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 3s ease-in-out;
+}
+
+/* 헤더 애니메이션 */
+.header {
+  margin-top: 20px;
+  animation: slideInTop 2s ease-in-out;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation: textGlow 1.5s infinite alternate;
+}
+
+p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  animation: fadeInText 2s ease-in-out;
+}
+
+/* 비디오와 오디오 컨테이너 */
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  animation: mediaFadeIn 3s ease-in-out;
+}
+
+.video-container {
+  margin: 20px;
+  animation: scaleIn 3s ease-out;
+}
+
+audio {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Footer 애니메이션 */
+.footer {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  animation: fadeInText 2s ease-in-out;
+}
+
+/* 시각적인 애니메이션 효과들 */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInTop {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes textGlow {
+  0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+  100% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  video {
+    max-width: 90%;
+  }
+
+  audio {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  video {
+    max-width: 100%;
+  }
+
+  audio {
+    width: 100%;
+  }
+}
